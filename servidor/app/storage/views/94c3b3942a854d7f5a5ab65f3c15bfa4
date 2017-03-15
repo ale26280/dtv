@@ -1,0 +1,339 @@
+<?php $__env->startSection('content'); ?>
+<div class="row-fluid">
+
+	<div class="span12">
+	
+		<div class="widget-box">
+		
+			<div class="widget-title">
+			
+				<span class="icon"><i class="icon-align-justify"></i></span>
+				
+				<h5>Editar configuración</h5>
+				
+			</div>
+
+			<div class="widget-content nopadding">
+
+				<?php echo Form::open( array('url' => route('configuracion_editar_post', $registro['id']), 'method' => 'POST', 'files' => true, 'class' => 'form-horizontal') ); ?> 
+
+
+					<div class="control-group">
+					<div class="controls">
+					<h3>Configuración web:</h3>
+					</div>
+					</div>
+					
+					<div class="control-group <?php echo $errors->has( 'titulo' ) ? 'error' : ''; ?>">
+					
+						<?php echo Form::label('titulo', 'Titulo', array('class' => 'control-label')); ?>
+						
+						<div class="controls">
+						
+							<?php echo Form::text( 'titulo', Input::old( 'titulo' ) != "" ? Input::old( 'titulo' ):$registro['titulo'] ); ?> <br/>
+							
+							<span class="errNew"><?php echo $errors->first( 'titulo' ); ?></span>
+							
+						</div>
+						
+					</div>					
+					
+					<div class="control-group <?php echo $errors->has( 'descripcion' ) ? 'error' : ''; ?>">
+					
+						<?php echo Form::label('descripcion', 'Descripcion', array('class' => 'control-label')); ?>
+						
+						<div class="controls">
+						
+							<?php echo Form::textarea( 'descripcion', Input::old( 'descripcion' ) != "" ? Input::old( 'descripcion' ):$registro['descripcion'] ); ?> <br/>
+							
+							<span class="errNew"><?php echo $errors->first( 'descripcion' ); ?></span>
+							
+						</div>
+						
+					</div>
+					
+
+					
+					<div class="control-group <?php echo $errors->has( 'metadatos' ) ? 'error' : ''; ?>">
+					
+						<?php echo Form::label('metadatos', 'Metadatos', array('class' => 'control-label')); ?>
+						
+						<div class="controls">
+						
+							<?php echo Form::textarea( 'metadatos', Input::old( 'metadatos' ) != "" ? Input::old( 'metadatos' ):$registro['metadatos'] ); ?> <br/>
+							
+							<span class="errNew"><?php echo $errors->first( 'metadatos' ); ?></span>
+							
+						</div>
+						
+					</div>
+					
+					<div class="control-group <?php echo $errors->has( 'analytics' ) ? 'error' : ''; ?>">
+					
+						<?php echo Form::label('analytics', 'Analytics', array('class' => 'control-label')); ?>
+						
+						<div class="controls">
+						
+							<?php echo Form::textarea( 'analytics', Input::old( 'analytics' ) != "" ? Input::old( 'analytics' ):$registro['analytics'] ); ?> <br/>
+							
+							<span class="errNew"><?php echo $errors->first( 'analytics' ); ?></span>
+							
+						</div>
+						
+					</div>
+					
+
+					<div class="control-group">
+					<div class="controls">
+					<h3>Correos:</h3>
+					</div>
+					</div>
+
+					
+					<div class="control-group <?php echo $errors->has( 'correo_nuevo_registro' ) ? 'error' : ''; ?>">
+	
+						<?php echo Form::label('correo_nuevo_registro', 'Correo nuevo registro', array('class' => 'control-label')); ?>
+						
+						<div class="controls">
+						
+							<?php echo Form::text( 'correo_nuevo_registro', Input::old( 'correo_nuevo_registro' ) != "" ? Input::old( 'correo_nuevo_registro' ):$registro['correo_nuevo_registro'] ); ?> <br/>
+							
+							<span class="errNew"><?php echo $errors->first( 'correo_nuevo_registro' ); ?></span>
+							
+						</div>
+						
+					</div>
+
+
+
+
+					<div class="control-group <?php echo $errors->has( 'correo_alertas' ) ? 'error' : ''; ?>">
+	
+						<?php echo Form::label('correo_alertas', 'Correo alertas', array('class' => 'control-label')); ?>
+						
+						<div class="controls">
+						
+							<?php echo Form::text( 'correo_alertas', Input::old( 'correo_alertas' ) != "" ? Input::old( 'correo_alertas' ):$registro['correo_alertas'] ); ?> <br/>
+							
+							<span class="errNew"><?php echo $errors->first( 'correo_alertas' ); ?></span>
+							
+						</div>
+						
+					</div>						
+					
+
+					<div class="control-group">
+					<div class="controls">
+					<h3>Juegos activos:</h3>
+					</div>
+					</div>
+
+
+
+					<div class="control-group <?php echo $errors->has('memo_test') ? 'error' : ''; ?>">
+					
+						<?php echo Form::label('memo_test', 'Memo test', array('class' => 'control-label') ); ?>
+						
+						<div class="controls">
+						
+							<?php echo Form::checkbox('memo_test', '1', $registro['memo_test'] ); ?> <br>
+							
+							<span class="errNew"><?php echo $errors->first('memo_test'); ?></span>
+							
+						</div>
+	
+					</div>	
+
+
+
+					<div class="control-group <?php echo $errors->has('que_fue') ? 'error' : ''; ?>">
+					
+						<?php echo Form::label('que_fue', 'Qué fue?', array('class' => 'control-label') ); ?>
+						
+						<div class="controls">
+						
+							<?php echo Form::checkbox('que_fue', '1', $registro['que_fue'] ); ?> <br>
+							
+							<span class="errNew"><?php echo $errors->first('que_fue'); ?></span>
+							
+						</div>
+	
+					</div>	
+
+
+
+					<div class="control-group <?php echo $errors->has('que_es') ? 'error' : ''; ?>">
+					
+						<?php echo Form::label('que_es', 'Qué es?', array('class' => 'control-label') ); ?>
+						
+						<div class="controls">
+						
+							<?php echo Form::checkbox('que_es', '1', $registro['que_es'] ); ?> <br>
+							
+							<span class="errNew"><?php echo $errors->first('que_es'); ?></span>
+							
+						</div>
+	
+					</div>	
+
+
+					<div class="control-group <?php echo $errors->has('trivia') ? 'error' : ''; ?>">
+					
+						<?php echo Form::label('trivia', 'Trivia', array('class' => 'control-label') ); ?>
+						
+						<div class="controls">
+						
+							<?php echo Form::checkbox('trivia', '1', $registro['trivia'] ); ?> <br>
+							
+							<span class="errNew"><?php echo $errors->first('trivia'); ?></span>
+							
+						</div>
+	
+					</div>
+
+
+
+
+					<div class="control-group">
+					<div class="controls">
+					<h3>Videos:</h3>
+					</div>
+					</div>
+
+
+					
+
+					<div class="control-group <?php echo $errors->has( 'video_promo' ) ? 'error' : ''; ?>">
+											
+						<?php echo Form::label('video_promo', 'Video promo', array('class' => 'control-label')); ?>
+						
+						<div class="controls">
+						
+							<?php if ($registro['video_promo'] != ""): ?>
+							<video width="320" height="240" id="video_promo" controls>
+								<source src="../../storage/videos/<?php echo $registro['video_promo']; ?>"  type="video/mp4">
+								Your browser does not support the video tag
+							</video><br/>
+							 
+
+							
+							<br/>
+							<?php endif; ?>
+							
+							<?php echo Form::file( 'video_promo' ); ?> <br/>
+							
+							<span class="errNew"><?php echo $errors->first( 'video_promo' ); ?></span>
+							
+						</div>
+						
+					</div>
+
+
+
+
+
+
+
+					<div class="control-group <?php echo $errors->has( 'video_buen_resultado' ) ? 'error' : ''; ?>">
+											
+						<?php echo Form::label('video_buen_resultado', 'Video buen resultado', array('class' => 'control-label')); ?>
+						
+						<div class="controls">
+						
+							<?php if ($registro['video_buen_resultado'] != ""): ?>
+							<video width="320" height="240" id="video_buen_resultado" controls>
+								<source src="../../storage/videos/<?php echo $registro['video_buen_resultado']; ?>"  type="video/mp4">
+								Your browser does not support the video tag
+							</video><br/>
+							 
+
+							
+							<br/>
+							<?php endif; ?>
+							
+							<?php echo Form::file( 'video_buen_resultado' ); ?> <br/>
+							
+							<span class="errNew"><?php echo $errors->first( 'video_buen_resultado' ); ?></span>
+							
+						</div>
+						
+					</div>
+
+
+
+
+
+
+					<div class="control-group <?php echo $errors->has( 'video_mal_resultado' ) ? 'error' : ''; ?>">
+											
+						<?php echo Form::label('video_mal_resultado', 'Video mal resultado', array('class' => 'control-label')); ?>
+						
+						<div class="controls">
+						
+							<?php if ($registro['video_mal_resultado'] != ""): ?>
+							<video width="320" height="240" id="video_mal_resultado" controls>
+								<source src="../../storage/videos/<?php echo $registro['video_mal_resultado']; ?>"  type="video/mp4">
+								Your browser does not support the video tag
+							</video><br/>
+							 
+
+							
+							<br/>
+							<?php endif; ?>
+							
+							<?php echo Form::file( 'video_mal_resultado' ); ?> <br/>
+							
+							<span class="errNew"><?php echo $errors->first( 'video_mal_resultado' ); ?></span>
+							
+						</div>
+						
+					</div>
+
+
+
+
+
+
+
+
+				</div>
+
+
+				<div class="form-actions">
+				
+					<button type="submit" class="btn btn-primary"><i class="icon-hdd icon-white"></i> Guardar</button>
+					
+				</div>
+				
+			<?php echo Form::close(); ?>
+
+
+			</div>
+			
+		</div>  
+		
+	</div>
+	
+</div>
+
+
+<!-- BORRAR Modal -->
+<div id="deleteModal" class="modal hide fade">
+	<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		<h3>Borrar registro</h3>
+	</div>
+	
+	<div class="modal-body">
+		¿Esta seguro que desea borrar este archivo?
+	</div>
+	
+	<div class="modal-footer">
+		<a href="#" data-dismiss="modal" class="btn">No</a>
+		<a href="#" data-dismiss="modal" class="btn btn-danger deleteYes">¡Si, estoy seguro!</a>
+	</div>
+</div>
+<!-- BORRAR Modal -->
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('admin.main', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

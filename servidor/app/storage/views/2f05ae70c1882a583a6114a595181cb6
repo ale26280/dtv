@@ -1,0 +1,157 @@
+<?php $__env->startSection('content'); ?>
+<div class="row-fluid">
+
+	<div class="span12">
+	
+		<div class="widget-box">
+		
+			<div class="widget-title">
+			
+				<span class="icon"><i class="icon-align-justify"></i></span>
+				
+				<h5>Editar quien es?</h5>
+				
+			</div>
+
+			<div class="widget-content nopadding">
+
+				<?php echo Form::open( array('url' => route('quienes_editar_post', $registro['id']), 'method' => 'POST', 'files' => true, 'class' => 'form-horizontal') ); ?> 
+					
+					<div class="control-group <?php echo $errors->has( 'nombre' ) ? 'error' : ''; ?>">
+					
+						<?php echo Form::label('nombre', 'Eema', array('class' => 'control-label')); ?>
+
+						
+						<div class="controls">
+						
+							<?php echo Form::text( 'nombre', Input::old( 'nombre' ) != "" ? Input::old( 'nombre' ):$registro['nombre'] ); ?> <br/>
+							
+							<span class="errNew"><?php echo $errors->first( 'nombre' ); ?></span>
+							
+						</div>
+						
+					</div>
+
+
+
+
+					<div class="control-group">
+					<div class="controls">
+					<h3>Image:</h3>
+					</div>
+					</div>
+
+
+					<div class="control-group <?php echo $errors->has( 'img' ) ? 'error' : ''; ?>">
+											
+						<?php echo Form::label('img', 'Imagen', array('class' => 'control-label')); ?>
+
+						
+						<div class="controls">
+						
+							<?php if($registro['img'] != ""): ?>
+							<img id="img1" src="<?php echo URL::to('/'); ?>/script/timthumb.php?src=../storage/quienes/<?php echo $registro['img']; ?>&w=180" /><br/>
+							
+							<br/>
+							<?php endif; ?>
+							
+							<?php echo Form::file( 'img' ); ?> <br/>
+							
+							<span class="errNew"><?php echo $errors->first( 'img' ); ?></span>
+							
+						</div>
+						
+					</div>
+					
+
+					<div class="control-group">
+					<div class="controls">
+					<h3>Respuestas:</h3>
+					</div>
+					</div>
+
+					
+
+					<?php foreach($respuestas as $i): ?>
+
+					<div class="control-group <?php echo $errors->has( 'res_1'.$i ) ? 'error' : ''; ?>">
+					
+						<?php echo Form::label('res_'.$i, 'Respuesta #'.$i, array('class' => 'control-label')); ?>
+
+						
+						<div class="controls">
+						
+							<?php echo Form::text( 'res_'.$i, Input::old( 'res_'.$i ) != "" ? Input::old( 'res_'.$i ):$registro['res_'.$i] ); ?> <br/>
+							
+							<span class="errNew"><?php echo $errors->first( 'res_'.$i ); ?></span>
+							
+						</div>
+						
+					</div>
+
+					<?php endforeach; ?>
+
+
+					<div class="control-group <?php echo $errors->has( 'correcta' ) ? 'error' : ''; ?>">
+					
+						<?php echo Form::label('correcta', 'correcta', array('class' => 'control-label')); ?>
+
+						
+						<div class="controls">
+						
+							<?php echo Form::select('correcta', $respuestas, $registro['correcta'] ); ?> <br/>
+							
+							<span class="errNew"><?php echo $errors->first( 'correcta' ); ?></span>
+							
+						</div>
+						
+					</div>
+
+
+
+
+					
+				</div>
+
+
+				<div class="form-actions">
+				
+					<button type="submit" class="btn btn-primary"><i class="icon-hdd icon-white"></i> Guardar</button>
+					
+					<a href="<?php echo route('quienes_listar'); ?>" class="btn"><i class="icon-remove-sign"></i> Cancelar</a>
+					
+				</div>
+				
+			<?php echo Form::close(); ?>
+
+
+
+			</div>
+			
+		</div>  
+		
+	</div>
+	
+</div>
+
+
+<!-- BORRAR Modal -->
+<div id="deleteModal" class="modal hide fade">
+	<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		<h3>Borrar registro</h3>
+	</div>
+	
+	<div class="modal-body">
+		¿Esta seguro que desea borrar este archivo?
+	</div>
+	
+	<div class="modal-footer">
+		<a href="#" data-dismiss="modal" class="btn">No</a>
+		<a href="#" data-dismiss="modal" class="btn btn-danger deleteYes">¡Si, estoy seguro!</a>
+	</div>
+</div>
+<!-- BORRAR Modal -->
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('admin.main', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

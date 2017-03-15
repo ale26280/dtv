@@ -1,0 +1,115 @@
+@extends('admin.main')
+@section('content')
+<div class="row-fluid">
+
+	<div class="span12">
+	
+		<div class="widget-box">
+		
+			<div class="widget-title">
+			
+				<span class="icon"><i class="icon-align-justify"></i></span>
+				
+				<h5>Editar configuración</h5>
+				
+			</div>
+
+			<div class="widget-content nopadding">
+
+				{{ Form::open( array('url' => route('configuracion_terminos_post', $registro->id), 'method' => 'POST', 'files' => true, 'class' => 'form-horizontal') ) }} 
+
+
+					<div class="control-group">
+					<div class="controls">
+					<h3>T&eacute;rminos usuarios:</h3>
+					</div>
+					</div>
+					
+				
+					
+					<div class="control-group {{ $errors->has( 'terminos_usuarios' ) ? 'error' : '' }}">
+					
+						{{ Form::label('terminos_usuarios', 'T&eacute;rminos usuarios', array('class' => 'control-label')) }}
+						
+						<div class="controls">
+						
+							{{ Form::textarea( 'terminos_usuarios', Input::old( 'terminos_usuarios' ) != "" ? Input::old( 'terminos_usuarios' ):$registro->terminos_usuarios ) }} <br/>
+							
+							<span class="errNew">{{ $errors->first( 'terminos_usuarios' ) }}</span>
+							
+						</div>
+						
+					</div>
+					
+
+
+
+					<div class="control-group">
+					<div class="controls">
+					<h3>T&eacute;rminos registros:</h3>
+					</div>
+					</div>
+					
+
+					
+					<div class="control-group {{ $errors->has( 'terminos_registros' ) ? 'error' : '' }}">
+					
+						{{ Form::label('terminos_registros', 'T&eacute;rminos registros', array('class' => 'control-label')) }}
+						
+						<div class="controls">
+						
+							{{ Form::textarea( 'terminos_registros', Input::old( 'terminos_registros' ) != "" ? Input::old( 'terminos_registros' ):$registro->terminos_registros ) }} <br/>
+							
+							<span class="errNew">{{ $errors->first( 'terminos_registros' ) }}</span>
+							
+						</div>
+						
+					</div>
+					
+					
+
+
+
+
+
+
+				</div>
+
+
+				<div class="form-actions">
+				
+					<button type="submit" class="btn btn-primary"><i class="icon-hdd icon-white"></i> Guardar</button>
+					
+				</div>
+				
+			{{ Form::close() }}
+
+
+			</div>
+			
+		</div>  
+		
+	</div>
+	
+</div>
+
+
+<!-- BORRAR Modal -->
+<div id="deleteModal" class="modal hide fade">
+	<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		<h3>Borrar registro</h3>
+	</div>
+	
+	<div class="modal-body">
+		¿Esta seguro que desea borrar este archivo?
+	</div>
+	
+	<div class="modal-footer">
+		<a href="#" data-dismiss="modal" class="btn">No</a>
+		<a href="#" data-dismiss="modal" class="btn btn-danger deleteYes">¡Si, estoy seguro!</a>
+	</div>
+</div>
+<!-- BORRAR Modal -->
+
+@stop

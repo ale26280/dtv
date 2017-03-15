@@ -1,0 +1,170 @@
+{"preguntas":
+ [
+  {"grupo0":
+   [
+
+    {
+     "tema":"a",
+     "pregunta":"¿De que color son los pantalones del chico que descubre el Smartphone Samsung Galaxy A5?",
+     "a":"Azul",
+     "b":"Rosa",
+     "c":"Verde",
+     "img": "1A.jpg",
+     "correcta":"b"
+    },
+    {
+     "tema":"b",
+     "pregunta":"¿Cuántas personas participaron del Flashmob?",
+     "a":"5",
+     "b":"10",
+     "c":"Más de 15",
+     "img": "1B.jpg",
+     "correcta":"c"
+    },
+    {
+     "tema":"c",
+     "pregunta":"¿Qué personaje del Shopping se prende con el baile?",
+     "a":"Un guardia de Seguridad",
+     "b":"Un chico de limpieza",
+     "c":"Un chico de mantenimiento",
+     "img": "1C.jpg",
+     "correcta":"a"
+    }
+    
+   ]
+  },
+  {"grupo1":
+   [
+
+    {
+     "tema":"a",
+     "pregunta":"¿Cuántos vendedores de Garbarino se suman al baile?",
+     "a":"Ninguno",
+     "b":"3",
+     "c":"6",
+     "img": "2A.jpg",
+     "correcta":"b"
+    },
+    {
+     "tema":"b",
+     "pregunta":"¿En que Shopping se realizó al Flashmob?",
+     "a":"Tortugas Open Mall",
+     "b":"Unicenter",
+     "c":"Abasto",
+     "img": "2B.jpg",
+     "correcta":"a"
+    },
+    {
+     "tema":"c",
+     "pregunta":"¿Cuántos vendedores de Compumundo se suman al Flashmob?",
+     "a":"Ninguno",
+     "b":"5",
+     "c":"3",
+     "img": "2C.jpg",
+     "correcta":"c"
+    }
+    
+   ]
+  },
+  {"grupo2":
+   [
+
+    {
+     "tema":"a",
+     "pregunta":"¿Cómo termina el Flashmob?",
+     "a":"Con una Selfie",
+     "b":"Todos cantando",
+     "c":"Todos Saltando",
+     "img": "3A.jpg",
+     "correcta":"a"
+    },
+    {
+     "tema":"b",
+     "pregunta":"¿De qué color es la A gigante que aparece en el Flashmob?",
+     "a":"Verde",
+     "b":"Azul",
+     "c":"Roja",
+     "img": "3B.jpg",
+     "correcta":"b"
+    },
+    {
+     "tema":"c",
+     "pregunta":"¿Qué tiene en la cabeza el chico que descubre el Samsung Galaxy A?",
+     "a":"Un gorro de lana",
+     "b":"Un peinado muy divertido",
+     "c":"Una gorra canchera",
+     "img": "3C.jpg",
+     "correcta":"c"
+    }
+    
+   ]
+  },
+  {"grupo3":
+   [
+
+    {
+     "tema":"a",
+     "pregunta":"¿Qué marcas están de fiesta con Samsung?",
+     "a":"Garbarino",
+     "b":"Compumundo",
+     "c":"Las 2",
+     "img": "4A.jpg",
+     "correcta":"c"
+    },
+    {
+     "tema":"b",
+     "pregunta":"¿Cómo se llama la aplicación del Samsung Galaxy A que permite que nadie se quede afuera en tus Selfies?",
+     "a":"Big Selfie",
+     "b":"Wide Selfie",
+     "c":"No tiene esa aplicación",
+     "img": "4B.jpg",
+     "correcta":"b"
+    },
+    {
+     "tema":"c",
+     "pregunta":"¿Cómo se llama la función del Samsung Galaxy A que permite darle mayor rendimiento a la batería de tu Smartphone?",
+     "a":" Modo Ulta Ahorro",
+     "b":"Modo Safe Battery",
+     "c":"No tiene esa función",
+     "img": "4C.jpg",
+     "correcta":"a"
+    }
+    
+   ]
+  },
+  {"grupo4":
+   [
+
+    {
+     "tema":"a",
+     "pregunta":"¿Qué sistema operativo tiene el nuevo Samsung Galaxy A?",
+     "a":"Android",
+     "b":"Samsung S.O.",
+     "c":"Otro",
+     "img": "5A.jpg",
+     "correcta":"a"
+    },
+    {
+     "tema":"b",
+     "pregunta":"¿Cuántos Mpx tiene la cámara frontal (Selfie) del nuevo Samsung Galaxy A5?",
+     "a":"2 Mpx",
+     "b":"4 Mpx",
+     "c":"5 Mpx",
+     "img": "5B.jpg",
+     "correcta":"c"
+    },
+    {
+     "tema":"c",
+     "pregunta":"¿Cuántos Mpx tiene la cámara principal del nuevo Samsung Galaxy A5?",
+     "a":"8 Mpx",
+     "b":"11 Mpx",
+     "c":"13 Mpx",
+     "img": "5C.jpg",
+     "correcta":"c"
+    }
+    
+   ]
+  }
+  
+ ]
+}

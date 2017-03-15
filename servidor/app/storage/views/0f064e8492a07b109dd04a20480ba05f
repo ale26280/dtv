@@ -1,0 +1,127 @@
+<?php $__env->startSection('content'); ?>
+
+<div class="row-fluid">
+
+	<div class="span12">
+	
+		<div class="widget-box">
+		
+			<div class="widget-title">
+			
+				<span class="icon"><i class="icon-align-justify"></i></span>
+				
+				<h5>Agregar memotest</h5>
+				
+			</div>
+
+			<div class="widget-content nopadding">
+			
+				<?php echo Form::open( array('url' => route('memotest_agregar_post'), 'method' => 'POST', 'files' => true, 'class' => 'form-horizontal') ); ?> 
+									
+					<div class="control-group <?php echo $errors->has( 'tema' ) ? 'error' : ''; ?>">
+					
+						<?php echo Form::label('tema', 'Tema', array('class' => 'control-label')); ?>
+
+						
+						<div class="controls">
+						
+							<?php echo Form::text( 'tema', Input::old( 'tema' ) != "" ? Input::old( 'tema' ):"" ); ?> <br/>
+							
+							<span class="errNew"><?php echo $errors->first( 'tema' ); ?></span>
+							
+						</div>
+						
+					</div>
+
+
+					<div class="control-group">
+					<div class="controls">
+					<h3>Im&aacute;genes:</h3>
+					</div>
+					</div>
+
+
+
+
+					<div class="control-group <?php echo $errors->has( 'img1' ) ? 'error' : ''; ?>">
+					
+						<?php echo Form::label('img1', 'Imagen 1', array('class' => 'control-label')); ?>
+
+						
+						<div class="controls">
+						
+							<?php echo Form::file( 'img1' ); ?> <br/>
+							
+							<span class="errNew"><?php echo $errors->first( 'img1' ); ?></span>
+							
+						</div>
+						
+					</div>
+
+
+
+					<div class="control-group <?php echo $errors->has( 'img2' ) ? 'error' : ''; ?>">
+					
+						<?php echo Form::label('img2', 'Imagen 2', array('class' => 'control-label')); ?>
+
+						
+						<div class="controls">
+						
+							<?php echo Form::file( 'img2' ); ?> <br/>
+							
+							<span class="errNew"><?php echo $errors->first( 'img2' ); ?></span>
+							
+						</div>
+						
+					</div>
+
+
+
+
+
+					
+				</div>
+			
+				
+
+				<div class="form-actions">
+				
+					<button type="submit" class="btn btn-primary"><i class="icon-hdd icon-white"></i> Guardar</button>
+					
+					<a href="<?php echo route('memotest_listar'); ?>" class="btn"><i class="icon-remove-sign"></i> Cancelar</a>
+					
+				</div>
+				
+			<?php echo Form::close(); ?>
+
+
+
+			</div>
+			
+		</div>  
+		
+	</div>
+	
+</div>
+
+
+<!-- BORRAR Modal -->
+<div id="deleteModal" class="modal hide fade">
+	<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		<h3>Borrar registro</h3>
+	</div>
+	
+	<div class="modal-body">
+		¿Esta seguro que desea borrar este archivo?
+	</div>
+	
+	<div class="modal-footer">
+		<a href="#" data-dismiss="modal" class="btn">No</a>
+		<a href="#" data-dismiss="modal" class="btn btn-danger deleteYes">¡Si, estoy seguro!</a>
+	</div>
+</div>
+<!-- BORRAR Modal -->
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('admin.main', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

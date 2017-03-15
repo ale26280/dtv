@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+         -->
+
+
+        <!-- <link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.min.css" /> -->
+        <link rel="stylesheet" type="text/css" href="lib/fontawesome/css/font-awesome.min.css" />
+        <link type="text/css" rel="stylesheet" href="lib/materialize/css/materialize.min.css"  media="screen,projection"/>
+        <link rel="stylesheet" type="text/css" href="css/app.css" />
+        <link rel="stylesheet" type="text/css" href="css/slide.css" />
+
+        <script src="lib/jquery/jquery-1.11.3.min.js"></script>
+        <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+
+        <title></title>
+
+
+    </head>
+    <body class="coverCenterBottom">
+  
+
+
+    <!-- login -->
+
+    <div id="login" class="panelapp" >
+
+
+
+    <main>
+
+     
+    <div class="section"></div>
+    <div class="section"></div>
+      <div class="container">
+      
+        <div class="white box-l">
+
+          <form  id="form_login">
+
+            <div class='row'>
+              <div class='col s6'>
+              </div>
+            </div>
+
+            <div class='row'>
+              <div class='input-field col s12'>
+                <input class='validate' type='email' name='usuario' id='usuario' />
+                <label for='usuario'>Ingresar correo</label>
+              </div>
+            </div>
+
+            <div class='row'>
+              <div class='input-field col s12'>
+                <input class='validate' type='password' name='password' id='password' />
+                <label for='password'>Ingrese password</label>
+              </div>
+              <label style='float: right;'>
+                                <a class='pink-text btnrecuperar' href='#!'><b>Recuperar contraseña</b></a>
+              </label>
+            </div>
+
+            <br />
+            <center>
+              <div class='row'>
+                <button type='submit' id="usrlogin" name='btn_login' class='col s12 btn btn-large waves-effect indigo'>Ingresar</button>
+              </div>
+            </center>
+
+            </form>
+         
+
+             <center>
+              <div class='row'>
+                <button type='submit' class='col s12 btn btn-large waves-effect indigo btncrearusuario'>Crear cuenta</button>
+              </div>
+            </center>
+
+             
+
+        </div>
+      </div>
+      
+
+    <div class="section"></div>
+    <div class="section"></div>
+    </main>
+
+
+
+    </div>
+
+
+    <!-- fin login -->
+
+    <img src="img/logolanding.png" id="logointerior" class="oculta">
+
+    <!-- fin logo -->
+
+
+    <!-- resigtro usuario -->
+
+    <div id="creausuario" class="panelapp">
+
+    <main>
+
+     
+    <div class="section"></div>
+    <div class="section">
+
+    </div>
+        
+        <div class="container">
+
+            <div class="white box-l">
+
+             <form id="form_crea_usuario">
+
+            <div class='row'>
+              <div class='col s12'>
+              </div>
+            </div>
+
+             <div class='row'>
+              <div class='input-field col s12'>
+                <input type="text" class="validate" name="nombre_u" id="nombre_u" tabindex="1" >
+                <label for="nombre_u">Nombre</label>
+                </div>
+            </div>
+
+
+            <div class='row'>
+              <div class='input-field col s12'>
+
+                <input type="text" class="validate" name="apellido_u" id="apellido_u" tabindex="2" >
+                <label for="apellido_u">Apellido</label>
+                </div>
+            </div>
+
+
+            <div class='row'>
+              <div class='input-field col s12'>
+
+                <input type="email" class="validate" name="correo_u" id="correo_u"  tabindex="3">
+                <label for="correo_u">Correo</label>
+                </div>
+            </div>
+
+
+            <div class='row'>
+                <div class='input-field col s12'>
+
+                    <input type="text" class="validate" name="dni_u" id="dni_u"  tabindex="4">
+                    <label for="dni_u">DNI</label>
+                </div>
+             </div>
+
+
+            <div class='row'>
+                     <div class='input-field col s12'>
+
+                         <input type="text" class="validate" name="celtrabajo_u" id="celtrabajo_u"  tabindex="5">
+                         <label for="celtrabajo_u">Celular de trabajo</label>
+                     </div>
+            </div>
+
+
+
+             <div class='row'>
+              <div class='input-field col s12'>
+                <input class='validate' type='password' name='password_u' id='password_u' tabindex="8" />
+                <label for='password'>Ingrese password</label>
+              </div>
+            </div>
+
+
+             <div class='row'>
+              <div class='input-field col s12'>
+                <input class='validate' type='password' name='repassword_u' id='repassword_u' tabindex="9"/>
+                <label for='password'>Re ingrese password</label>
+              </div>
+            </div>
+
+
+
+
+            <div class='row'>
+              <div class='input-field col s12'>
+
+            <i class="fa fa-square-o" onclick="terminos.checkToggle( $(this) )" id="usercheck"></i> <a onclick="terminos.abre('usuario')" class="underline"> Acepto bases y condiciones</a>
+
+                </div>
+            </div>
+
+
+
+              <br />
+            <center>
+              <div class='row'>
+                <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect indigo btncrear' id="btncrear">Crear</button>
+              </div>
+            </center>
+
+            </form>
+
+
+             <center>
+              <div class='row'>
+                <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect indigo btncancelar' onclick="usuario.navega('login');">Cancelar</button>
+              </div>
+            </center>
+
+
+
+        </div>
+
+
+            <div class="section"></div>
+            <div class="section"></div>
+
+        </main>
+
+
+    </div>
+
+    <!-- fin registro usuario -->
+
+
+
+    <!-- reespuesta registro -->
+
+    <div id="respuestaregistro" class="panelapp">
+
+    <main>
+
+
+    <div class="section"></div>
+    <div class="section"></div>
+
+        <div class="container">
+            <div class="white box-l">
+
+            <div class='row'>
+              <div class='col s6'>
+              </div>
+            </div>
+
+            <p>
+                Se ha registrado con éxito. Se le enviará un correo con los datos de acceso cuando la cuenta se enceuntre activa.
+                <br>
+                <br>
+                Muchas gracias.
+            </p>
+
+
+             </div>
+        </div>
+
+
+        <div class="section"></div>
+            <div class="section"></div>
+    </main>
+
+    </div>
+
+    <!-- fin  reespuesta registro  -->
+
+
+
+
+    <!-- recupera contraseña -->
+
+    <div id="recuperapass" class="panelapp">
+
+    <main>
+
+
+    <div class="section"></div>
+    <div class="section"></div>
+
+        <div class="container">
+            <div class="white box-l">
+
+             <form id="form_pass" class="col s12" method="post">
+
+                 <div class='row'>
+                     <div class='col s6'>
+                     </div>
+                 </div>
+
+            <div class='row'>
+              <div class='input-field col s12'>
+                <input class='validate' type='email' name='correorecupera' id='correorecupera' />
+                <label for='correorecupera'>Ingrese su correo</label>
+              </div>
+            </div>
+
+            <center>
+            <div class='row'>
+            <button type="submit" class="col s12 btn btn-large waves-effect indigo" id="rpassbtn">RECUPERAR</button>
+            </div>
+            </center>
+
+
+             </form>
+
+             <center>
+              <div class='row'>
+                <button type='submit' name='' class='col s12 btn btn-large waves-effect indigo' onclick="usuario.navega('login');">Cancelar</button>
+              </div>
+            </center>
+
+
+
+             </div>
+        </div>
+
+
+        <div class="section"></div>
+            <div class="section"></div>
+
+    </main>
+
+    </div>
+
+    <!-- fin recupera contraseña -->
+
+
+    <!-- resigtro registro -->
+
+    <div id="crearegistro" class="panelapp">
+
+        <main>
+
+
+                <div class="container">
+
+                    <div class="section"></div>
+                    <div class="section text">
+                        Nos gustaría saber<br>
+                        más de vos
+                    </div>
+
+                    <div class="white box-r">
+
+                        <form id="form_crea_registro" method="post">
+
+                            <div class='row'>
+                                <div class='col s12'>
+                                </div>
+                            </div>
+
+                            <div class='row'>
+                                <div class='input-field col s6'>
+                                    <input type="text" class="validate" name="nombre" id="nombre_r" tabindex="1" >
+                                    <label for="nombre_r">Nombre</label>
+                                </div>
+
+                                <div class='input-field col s6'>
+
+                                    <input type="text" class="validate" name="apellido" id="apellido_r" tabindex="2" >
+                                    <label for="apellido_r">Apellido</label>
+                                </div>
+
+                            </div>
+
+
+                            <div class='row'>
+                                <div class='input-field col s6'>
+                                    <input type="text" class="validate" name="dni" id="dni_r" tabindex="3" >
+                                    <label for="dni_r">DNI</label>
+                                </div>
+
+                                <div class='input-field col s6'>
+
+                                    <input type="text" class="validate" name="telefono" id="celular_r" tabindex="4" >
+                                    <label for="celular_r">N° Celular</label>
+                                </div>
+
+                            </div>
+
+
+                            <div class='row'>
+                                <div class='input-field col s12'>
+
+                                    <input type="email" class="validate" name="correo" id="correo_u"  tabindex="5">
+                                    <label for="correo_U">Mail</label>
+                                </div>
+                            </div>
+
+
+                            <div class='row oculta'>
+                                <div class='input-field col s6'>
+                                    <input class='' type='text' name='residencia' id='residencia_r' tabindex="6"/>
+                                    <label for='residencia_r'>Lugar de residencia</label>
+                                </div>
+                            </div>
+
+
+                            <div class='row'>
+                                <div class='input-field col s12'>
+
+                                    <input type="text" class="validate provincia" name="provincia" id="provincia_r"  tabindex="6">
+                                    <label for="provincia_r">Provincia</label>
+                                </div>
+                            </div>
+
+                            <div class='row'>
+                                <div class='input-field col s12'>
+
+                                    <input type="text" class="validate localidad" name="localidad" id="localidad_r"  tabindex="7">
+                                    <label for="localidad_r">Localidad</label>
+                                </div>
+                            </div>
+
+
+
+                            <div class='row oculta'>
+
+                                <H5>¿QUÉ OPERADOR DE CABLE TENÉS?</H5>
+
+
+                                <div class='input-field col s6'>
+                                    <input class='' type='text' name='proveedor_cable' id='operador_r' value="DIRECTV" tabindex="7"/>
+                                    <label for='operador_r'></label>
+                                </div>
+
+
+
+                                <div class='input-field col s6'>
+                                    <span>
+                                    <input class="with-gap" name="proveedor_cable_tipo" type="radio" id="tiposi_r" value="1"  tabindex="8"/>
+                                    <label for="tiposi_r">Pospago</label>
+                                    </span>
+
+                                    <span>
+                                    <input class="with-gap" name="proveedor_cable_tipo" type="radio" id="tipono_r" value="2"  tabindex="9"/>
+                                    <label for="tipono_r">Prepago</label>
+                                    </span>
+
+                                </div>
+
+
+
+                            </div>
+
+
+                            <div class='row oculta'>
+
+                                <H5>¿CUÁL ES TU PROVEEDOR DE INTERNET?</H5>
+
+
+                                <div class='input-field col s6'>
+                                    <input class='' type='text' name='proveedor_internet' id='internet_r' tabindex="10"/>
+                                    <label for='internet_r'></label>
+                                </div>
+
+
+                            </div>
+
+
+                            <div class='row oculta'>
+
+                                <H5>¿ESTÁS INTERESADO EN RECIBIR INFORMACIÓN DE DIRECTV?</H5>
+
+
+                                <div class='input-field col s6'>
+                                    <span>
+                                    <input class="with-gap" name="recibe_info" type="radio" id="recibirsi_r" value="1" tabindex="11"/>
+                                    <label for="recibirsi_r">SÍ</label>
+                                    </span>
+
+                                    <span>
+                                    <input class="with-gap" name="recibe_info" type="radio" id="recibirno_r" value="2"  tabindex="12"/>
+                                    <label for="recibirno_r">NO</label>
+                                    </span>
+
+                                </div>
+                            </div>
+
+
+
+                            <div class='row'>
+                                <div class='input-field col s12'>
+
+                                    <i class="fa fa-square-o" onclick="terminos.checkToggle( $(this) )" id="registrocheck"></i> <a onclick="terminos.abre('registro')" class="underline"> Acepto bases y condiciones</a>
+
+                                </div>
+                            </div>
+
+
+
+                            <br />
+                            <center>
+                                <div class='row'>
+                                    <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect indigo' id="btncrear_registro">Siguiente</button>
+                                </div>
+                            </center>
+
+                        </form>
+
+
+                    </div>
+
+
+                    <div class="section" style="height:500px"></div>
+                    <div class="section"></div>
+
+        </main>
+
+
+    </div>
+
+    <!-- fin registro registro -->
+
+
+
+    <!-- landing -->
+
+    <div id="landing" class="panelapp">
+
+        <img src="img/logolanding.png" id="logolanding">
+        <img src="img/logo-directtv.png" id="logotop">
+
+        <div class="landingTexto">
+            ¡DIRECTV te lleva a ver al Barça!
+        </div>
+        <div id="landing_slider">
+
+            <div class="slide1"></div>
+            <div class="slide2"></div>
+
+
+        </div>
+
+
+        <div id="landing-play" class="btndtv">JUGAR <i class="fa fa-play" aria-hidden="true"></i></div>
+
+
+    </div>
+
+    <!-- fin landing -->
+
+
+
+
+    <!-- video_promo -->
+
+    <div id="video_promo" class="panelapp">
+
+        <video  style="background:#000"
+                poster="img/bgvideo.png"
+                id="video_promo_rep"
+                class="oculta"
+                width="100%"
+                height="100%"
+                src='' preload="preload">
+        </video>
+
+
+    </div>
+
+    <!-- fin video_promo -->
+
+
+
+
+    <!-- dashboardGame -->
+
+    <div id="dashboardGame" class="panelapp">
+
+        <div class="row">
+            <div class="col s6 trivia-game  oculta" onclick="trivia.inicia()">trivia</div>
+            <div class="col s6 memo_test-game  oculta">memo test</div>
+            <div class="col s6 que_fue-game  oculta">que fue</div>
+            <div class="col s6 que_es-game  oculta">que es</div>
+        </div>
+
+
+
+    </div>
+
+    <!-- fin dashboardGame -->
+
+
+
+    <!-- trivia -->
+
+    <div id="trivia" class="panelapp">
+
+        <img src="img/placa_trivia.png" class="placa_game_full" id="trivia_juega">
+
+        <div id="trivia_contenedor" class="container">
+
+            <div id="trivia_pregunta">pregunta</div>
+            <div id="trivia_respuestas">
+                <div id="trivia_r1" class="seleccion" data-indice="1">respuesta</div>
+                <div id="trivia_r2" class="seleccion" data-indice="2">respuesta</div>
+                <div id="trivia_r3" class="seleccion" data-indice="3">respuesta</div>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+    <!-- fin trivia -->
+
+
+
+    <!-- trivia puntos -->
+
+    <div id="trivia_puntos" class="panelapp fondopuntos">
+
+        <div class="puntos_vista">
+            <span class="felicitaciones">¡FELICITACIONES!</span><br>
+            <span class="sumaste">SUMASTE UN TOTAL DE</span><br>
+            <span class="puntos_total"><span class="puntos_total_imprime"></span> PUNTOS</span>
+
+
+
+        </div>
+        <div class="franjapuntos">Y YA ESTÁS PARTICIPANDO POR UN LUGAR<BR>ENLA SEMIFINAL Y SER UNO DE LOS<BR>VIEAJE A VER AL  Barça</div>
+
+    </div>
+
+    <!-- fin trivia puntos-->
+
+
+
+
+
+    <!-- preload -->
+
+    <div id="preload" class="panelapp">
+    	 <img src="img/preload.GIF">
+    </div>
+
+
+    <!-- fin preload -->
+
+
+
+
+    <div id="relojTest" class="oculta">
+
+        <progress id="progress" value="0" max="">
+        </progress>
+
+    </div>
+
+
+    <!-- descarga app -->
+
+    <div id="descargaContenidos" class="panelapp">
+
+        <main>
+
+
+            <div class="section"></div>
+            <div class="section"></div>
+
+            <div class="container">
+                <div class="white box-l">
+
+                    <div class='row'>
+                        <div class='col s6'>
+                        </div>
+                    </div>
+
+                    <p class="salidaDescargas">
+                    </p>
+                    <p class="textoespera"><b>Actualizando por favor espere...</b></p>
+
+
+                </div>
+            </div>
+
+
+            <div class="section"></div>
+            <div class="section"></div>
+        </main>
+
+
+    </div>
+
+    <!-- fin descarga app -->
+
+
+    <!-- terminos -->
+
+    <div id="terminos">
+        <div id="closeterminos" onclick="terminos.cierra()">
+        <i class="fa fa-times"></i>
+        </div>
+        <div id="terminostexto">
+
+            <p class="terminostexto"></p>
+
+        </div>
+
+    </div>
+
+
+    <!-- fin terminos -->
+
+
+    <!-- video_buen_resultado -->
+
+    <div id="video_buen_resultado" class="panelapp">
+
+        <video  style="background:#000"
+                poster="img/bgvideo.png"
+                id="video_buen_resultado_rep"
+                class="oculta"
+                width="100%"
+                height="100%"
+                src='' preload="preload">
+        </video>
+
+
+
+
+    </div>
+
+    <!-- fin video_buen_resultado -->
+
+
+
+
+    <!-- video_mal_resultado -->
+
+    <div id="video_mal_resultado" class="panelapp">
+
+        <video  style="background:#000"
+                poster="img/bgvideo.png"
+                id="video_mal_resultado_rep"
+                class="oculta"
+                width="100%"
+                height="100%"
+                src='' preload="preload">
+        </video>
+
+
+    </div>
+
+    <!-- fin video_mal_resultado -->
+
+
+    <!-- placa promo -->
+    <div id="placa_promo" class="panelapp">
+
+
+
+    </div>
+    <!-- fin placa promo -->
+
+    <!-- menu -->
+
+    <ul id="slide-out" class="side-nav">
+        <li>
+            <b>Hola,</b> <span id="vistausuario"></span>
+        </li>
+
+        <li>
+
+            <span id="logoutuser" onclick="usuario.logout();" class="btn waves-effect waves-light">
+                Salir
+                </span>
+        </li>
+
+        <li><div class="divider"></div></li>
+
+        <li><span class="irHome" onclick="usuario.navega('landing'); $('.button-collapse').sideNav('hide');">Ir al inicio</span></li>
+
+        <li><div class="divider"></div></li>
+        <li><b>Estado de la red:</b>  <span id="estadoInternet"></span></li>
+
+        <li><b>Registros locales:</b> <span id="cantidadDbLocales">-</span></li>
+
+        <li><b>Registros en el servidor:</b> <bu id="cantidadServidorS"></bu></li>
+        <li><div class="divider"></div></li>
+        <br>
+        <li>
+
+            <button id="actualizaServidor" onclick="config.actualizaRegistroServidor()" class="btn waves-effect waves-light">
+                Actualizar registros
+                </button>
+        </li>
+
+
+        <li>
+
+            <span id="actualizaServidor" onclick="config.actualizaApp()" class="btn waves-effect waves-light">
+                Actualizar app
+                </span>
+        </li>
+
+
+
+        <li>
+
+            <span id="activaUtilidades" class="btn waves-effect waves-light" onclick="config.muestraUtilidades()">
+                Utilidades
+                </span>
+        </li>
+
+        <br>
+        <br>
+        <br>
+
+        <li><div class="divider"></div></li>
+
+        <div id="restringido">
+
+            <!--
+            <h5>
+            <b>Activa debug:</b>
+            <span id="activaDebug" class="btn btn-success btn-sm" onclick="config.activaDebug()">
+            Activar
+            </span>
+            </h5>
+
+
+            <li>
+                <b>Validaciones:</b>
+                <span id="activaValidaciones" class="btn btn-success btn-sm" onclick="config.validaciones()">
+                Activadas
+                </span>
+            </li>
+             -->
+
+            <li>
+                <b>Borrar datos locales:</b>
+                <span id="borrarLocales" onclick="config.borrarLocales()" class="btn btn-danger btn-sm">
+                Borrar
+                </span>
+            </li>
+
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+
+    </ul>
+
+
+    <a href="#" data-activates="slide-out" class="button-collapse menuconf"><i class="fa fa-bars" aria-hidden="true"></i></a>
+
+    <!-- fin menu -->
+
+    <input type="text" class="blurBox" style="display:none;">
+
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="lib/materialize/js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+
+
+
+    </body>
+</html>

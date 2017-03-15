@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+
+        <!-- <link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.min.css" /> -->
+        <link rel="stylesheet" type="text/css" href="lib/fontawesome/css/font-awesome.min.css" />
+        <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+        <link rel="stylesheet" type="text/css" href="css/app.css" />
+
+        <script src="lib/jquery/jquery-1.11.3.min.js"></script>
+        <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+
+        <title></title>
+
+
+    </head>
+    <body>
+  
+
+
+    <!-- origen -->
+
+    <div id="login" class="panelapp">
+
+
+
+    <main>
+    <center>
+     
+    <div class="section"></div>
+    <div class="section"><img src="img/logo.png" align="center"></div>
+      <div class="container">
+      
+        <div class="white box-l">
+
+          <form  id="form_login">
+
+            <div class='row'>
+              <div class='col s6'>
+              </div>
+            </div>
+
+            <div class='row'>
+              <div class='input-field col s12'>
+                <input class='validate' type='email' name='usuario' id='usuario' />
+                <label for='email'>Ingresar correo</label>
+              </div>
+            </div>
+
+            <div class='row'>
+              <div class='input-field col s12'>
+                <input class='validate' type='password' name='password' id='password' />
+                <label for='password'>Ingrese password</label>
+              </div>
+              <label style='float: right;'>
+                                <a class='pink-text btnrecuperar' href='#!'><b>Recuperar contraseña</b></a>
+              </label>
+            </div>
+
+            <br />
+            <center>
+              <div class='row'>
+                <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect indigo'>Ingresar</button>
+              </div>
+            </center>
+
+            </form>
+         
+
+             <center>
+              <div class='row'>
+                <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect indigo btncrearusuario'>Crear cuenta</button>
+              </div>
+            </center>
+
+             
+
+        </div>
+      </div>
+      
+    </center>
+
+    <div class="section"></div>
+    <div class="section"></div>
+    </main>
+
+
+
+    </div>
+
+
+    <!-- fin origen -->
+
+
+
+    <!-- logo 
+
+    <div id="logo" class="panelapp">
+
+        <img src="img/logo.png">
+    </div>
+
+    -->
+
+
+    <!-- fin logo -->
+
+
+    <!-- resigtro usuario -->
+
+    <div id="creausuario" class="panelapp">
+
+    <main>
+    <center>
+     
+    <div class="section"></div>
+    <div class="section">
+    <img src="img/logo.png" align="center">
+    </div>
+        
+        <div class="container">
+
+            <div class="white box-l">
+
+             <form id="form_crea_usuario">
+
+            <div class='row'>
+              <div class='col s12'>
+              </div>
+            </div>
+
+             <div class='row'>
+              <div class='input-field col s12'>
+                <input type="text" class="validate" name="nombre_u" id="nombre_u" tabindex="1" >
+                <label for="nombre">Nombre</label>
+                </div>
+            </div>
+
+
+            <div class='row'>
+              <div class='input-field col s12'>
+                
+                <input type="text" class="validate" name="apellido_u" id="apellido_u" tabindex="2" >
+                <label for="apellido">Apellido</label>
+                </div>
+            </div>
+
+
+            <div class='row'>
+              <div class='input-field col s12'>
+                
+                <input type="email" class="validate" name="correo_u" id="correo_u"  tabindex="3">
+                <label for="correo">Correo</label>
+                </div>
+            </div>
+
+
+             <div class='row'>
+              <div class='input-field col s12'>
+                <input class='validate' type='password' name='password_u' id='password_u' />
+                <label for='password'>Ingrese password</label>
+              </div>
+            </div>
+
+
+             <div class='row'>
+              <div class='input-field col s12'>
+                <input class='validate' type='password' name='repassword_u' id='repassword_u' />
+                <label for='password'>Re ingrese password</label>
+              </div>
+            </div>
+
+
+
+
+            <div class='row'>
+              <div class='input-field col s12'>
+
+            <i class="fa fa-square-o" onclick="terminos.checkToggle( $(this) )" id="usercheck"></i> <a onclick="terminos.abre()" class="underline"> Acepto bases y condiciones</a>
+
+                </div>
+            </div>
+
+
+
+              <br />
+            <center>
+              <div class='row'>
+                <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect indigo btncrear'>Crear</button>
+              </div>
+            </center>
+            
+            </form>
+                
+
+             <center>
+              <div class='row'>
+                <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect indigo btncancelar' onclick="usuario.navega('login');">Cancelar</button>
+              </div>
+            </center>
+
+            
+            
+        </div>
+
+
+            <div class="section"></div>  
+            <div class="section"></div>
+        </center>
+        </main>
+
+
+    </div>
+
+    <!-- fin registro usuario -->
+
+
+
+    <!-- reespuesta registro -->
+
+    <div id="respuestaregistro" class="panelapp">
+
+    <main>
+    <center>
+     
+    <div class="section"></div>
+    <div class="section"><img src="img/logo.png" align="center"></div>
+      
+        <div class="container">
+            <div class="white box-l">
+
+            <div class='row'>
+              <div class='col s6'>
+              </div>
+            </div>
+
+            <p>
+                Se ha registrado con éxito. Se le enviará un correo con los datos de acceso cuando la cuente cuenta se enceuntre activa.
+                <br>
+                <br>
+                Muchas gracias.
+            </p>
+          
+                
+             </div>
+        </div>
+
+
+        <div class="section"></div>  
+            <div class="section"></div>
+    </center>
+    </main>
+
+    </div>
+
+    <!-- fin  reespuesta registro  -->
+
+
+
+
+    <!-- recupera contraseña -->
+
+    <div id="recuperapass" class="panelapp">
+
+    <main>
+    <center>
+     
+    <div class="section"></div>
+    <div class="section"><img src="img/logo.png" align="center"></div>
+      
+        <div class="container">
+            <div class="white box-l">
+
+             <form id="for_rpass" class="col s12" method="post">
+
+            <div class='row'>
+              <div class='input-field col s12'>
+                <input class='validate' type='email' name='correo' id='correorecupera' />
+                <label for='email'>Ingrese su correo</label>
+              </div>
+            </div>
+
+            <center>
+            <div class='row'>
+            <button type="submit" class="col s12 btn btn-large waves-effect indigo" id="">RECUPERAR</button>
+            </div>
+            </center>
+
+             <center>
+              <div class='row'>
+                <button type='submit' name='' class='col s12 btn btn-large waves-effect indigo' onclick="usuario.navega('login');">Cancelar</button>
+              </div>
+            </center>
+
+            </form>
+                
+             </div>
+        </div>
+
+
+        <div class="section"></div>  
+            <div class="section"></div>
+    </center>
+    </main>
+
+    </div>
+
+    <!-- fin recupera contraseña -->
+
+
+
+
+
+
+    <!-- video_promo -->
+    
+    <div id="video_promo" class="panelapp">
+        video
+    		
+            <!--
+    		 <video  style="background:transparent" id="rep" width="100%" height="205" poster="img/bgtransparent.png"  preload="preload" controls>
+  			 <source src="file:///data/data/com.kood.trivia/files/video.mp4" type="video/mp4" id="vurl"/>
+  			 </video> 
+            
+             <div id="player">
+                <img src="img/poster.png" width="100%">
+            </div>
+            -->
+
+
+    </div>
+
+    <!-- fin video_promo -->
+
+
+    <!-- dashboardGame -->
+    <div id="dashboardGame" class="panelapp"> dashboardGame </div>
+    <!-- fin dashboardGame -->
+
+    <!-- trivia -->
+
+    <div id="trivia" class="panelapp"></div>
+
+    <!-- fin trivia -->
+
+
+    <!-- respuesta final trivia-->
+    
+    <div id="resultados" class="panelapp">
+    	<div class="container">
+    	 <div class="texto2 alto">Contestaste</div>
+    	 <div class="big" id="qrespuestas">0</div>
+    	 <div class="texto2" style="margin-top:0px">
+    	 preguntas<br>
+    	 correctamente<br>
+    	 y tu tiempo fué de<br>
+    	 <div class="big" id="tiempo">00 00 00</div>
+    	 segundos
+    	 </div>
+        </div>
+
+    </div>
+
+
+    <!-- fin respuesta final trivia-->
+
+    <!-- configuracio -->
+    
+    <div id="config" class="panelapp">
+    		
+    		<div class="encabezado" onclick="app.formulario('muestra');"><i class="fa fa-cog"></i> CONFIG</div>
+    		
+    		<div class="container blanco">
+    		<div class="form-group">
+    			<h5>
+                <b>Origen:</b>  
+                <span id="vistaOrigen"></span>
+                </h5>
+
+                <h5><b>Estado de la red:</b>  <span id="estadoRed">No conexion</span></h5>
+
+                <h5><b>Registros locales:</b> <span id="cantidadLocales">0</span></h5>
+
+                <h5><b>Registros en el servidor:</b> <span id="cantidadServidor">0</span></h5>
+
+                <h5>
+                <b>Actualizar servidor:</b> 
+                <span id="actualizaServidor" onclick="config.actualizaRegistroServidor()" class="btn btn-success btn-sm">
+                Actualizar
+                </span>
+                </h5>
+
+                <h5>
+                <b>Actualizar sólo fotos:</b> 
+                <span id="actualizaServidorFotos" onclick="datos.actualizaServidorFotos()" class="btn btn-success btn-sm">
+                Actualizar
+                </span>
+                </h5>
+                
+
+                <h5 >
+                <b>Utilidades:</b> 
+                <span id="activaUtilidades" class="btn btn-success btn-sm" onclick="config.muestraUtilidades()">
+                Acceder
+                </span>
+                </h5>
+
+
+                <div id="restringido">
+
+                <!--
+                <h5>
+                <b>Activa debug:</b> 
+                <span id="activaDebug" class="btn btn-success btn-sm" onclick="config.activaDebug()">
+                Activar
+                </span>
+                </h5>
+                -->
+                
+                <h5>
+                <b>Validaciones:</b> 
+                <span id="activaValidaciones" class="btn btn-success btn-sm" onclick="config.validaciones()">
+                Activadas
+                </span>
+                </h5>
+
+                <h5>
+                <b>Borrar datos locales:</b> 
+                <span id="borrarLocales" onclick="config.borrarLocales()" class="btn btn-danger btn-sm">
+                Borrar
+                </span> 
+                </h5>
+
+                </div>
+                
+            </div>
+            </div>
+
+    </div>
+
+
+    <!-- fin respuesta -->
+  
+
+    <!-- preload -->
+    
+    <div id="preload" class="panelapp">
+    	 <img src="img/preload.GIF">
+    </div>
+
+
+    <!-- fin preload -->
+
+
+
+
+
+    <div id="salidatoggle" style="display:none" class=""><i class="fa fa-bug"></i></div>
+    <div id="salida" style="display:none" class=""></div>
+
+
+
+    <div id="relojTest" style="display:none"></div>
+
+
+    <div id="descargaContenidos">
+        <br><br>
+        <br><br>
+        <br><br>
+        Descargando información. <br>
+        Por favor espere...
+        <br>
+        <div id="porcentaje">0</div>
+    </div>
+    
+
+
+
+
+    <div id="terminos">
+        <div id="closeterminos" onclick="terminos.cierra()">
+        <i class="fa fa-times"></i>
+        </div>
+        <div id="terminostexto"></div>
+
+    </div>
+
+
+
+
+
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+
+
+
+    </body>
+</html>

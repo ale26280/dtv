@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+	<head>
+	
+		<meta charset="utf-8">
+		<title>:: Provincia Net ::</title>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Provincia Net">
+		<meta name="keywords" content="">
+		
+		<link rel="shortcut icon" href="">
+		
+		<?php echo HTML::style('css/bootstrap.3.min.css'); ?>
+		<?php echo HTML::style('css/estilos.css'); ?>
+		
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<?php echo HTML::script('js/lib/bootstrap.3.min.js'); ?>
+		<?php echo HTML::script('js/app.login.js'); ?>
+
+	</head>
+
+	<body>
+
+	<div class="layout">
+	
+		<div class="manoFondo"></div>
+
+		<div class="container">
+		
+			<div class="login">
+			
+				<h1>Cambio de contraseña</h1>
+				
+				<br/>
+			
+				<!--FORM-->
+				<form method="post" action="javascript:void%200;" id="formReset">
+				
+					<fieldset>
+						<input type="hidden" name="id" value="<?php echo $id; ?>" />
+
+						<div class="form-group">
+							<label for="password">Nuevo Password</label>
+							<input class="form-control" type="password" id="password" name="password" alt="Password" /><br/>
+						</div>
+
+						<div class="form-group">
+							<label for="password_confirm">Confirme</label>
+							<input class="form-control" type="password" id="password_confirm" name="password_confirm" alt="Password_confirm" /><br/>
+						</div>
+						
+						<a href="javascript:void%200;" title="Confirmar" id="btnResetConfirmar" data-reset="<?php echo route('reset_post'); ?>" class="boton" style="width:100px;">Confirmar</a>
+					
+						<div id="reset_error" class="error" stype="display:none;"></div>
+						
+					</fieldset>
+				</form>
+		
+			</div>
+	
+	
+			<div class="logos"></div>
+	
+		</div>
+		
+	</div>
+	
+	
+		<!-- MODAL RECOVERY OK -->
+		<div id="modalRecoveryOk" class="modal fade recoveryok-modal" tabindex="-1" role="dialog" aria-labelledby="RecoveryOk" aria-hidden="true">
+		
+			<div class="modal-dialog modal-m">
+			
+				<div class="modal-content">
+				
+					<a href="javascript:void%200;" class="icoCerrar" data-dismiss="modal"></a>
+					
+					<div class="modalContenido">
+					
+						<h2>¡Contraseña cambiada!</h2>
+						
+						<br/>
+						
+						<p>Tu contraseña fue cambiada, ahora puedes ingresar a tu cuenta con tu nueva contraseña.</p>
+						
+						<br/>
+						
+						<a href="<?php echo route('login'); ?>" class="boton">Aceptar</a>						
+						
+					</div>
+					
+				</div>
+				
+			</div>
+			
+		</div>
+	
+	
+	</body>
+	
+</html>

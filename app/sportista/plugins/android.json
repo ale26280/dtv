@@ -1,0 +1,52 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "com.kood.sportista"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.kood.sportista"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.kood.sportista"
+        },
+        "cordova-plugin-device-orientation": {
+            "PACKAGE_NAME": "com.kood.sportista"
+        },
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "com.kood.sportista"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.kood.sportista"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "com.kood.sportista"
+        },
+        "cordova-plugin-media": {
+            "PACKAGE_NAME": "com.kood.sportista"
+        },
+        "cordova-plugin-media-capture": {
+            "PACKAGE_NAME": "com.kood.sportista"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "com.kood.sportista"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.kood.sportista"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.kood.sportista"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.kood.sportista"
+        }
+    }
+}

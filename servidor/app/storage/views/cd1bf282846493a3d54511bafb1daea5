@@ -1,0 +1,193 @@
+<?php $__env->startSection('content'); ?>
+
+<div class="row-fluid">
+
+	<div class="span12">
+	
+		<div class="widget-box">
+		
+			<div class="widget-title">
+			
+				<span class="icon"><i class="icon-align-justify"></i></span>
+				
+				<h5>Agregar Administrador</h5>
+				
+			</div>
+
+			<div class="widget-content nopadding">
+			
+				<?php echo Form::open( array('url' => route('usuario_agregar_post'), 'method' => 'POST', 'files' => true, 'class' => 'form-horizontal') ); ?> 
+					
+					<div class="control-group <?php echo $errors->has( 'perfil' ) ? 'error' : ''; ?>">
+					
+						<?php echo Form::label('perfil', 'Perfil', array('class' => 'control-label')); ?>
+
+						
+						<div class="controls">
+						
+							<?php echo Form::select('perfil_id', $perfiles, Input::old( 'perfil_id' ) != "" ? Input::old( 'perfil_id' ):"" ); ?> <br/>
+							
+							<span class="errNew"><?php echo $errors->first( 'perfil' ); ?></span>
+							
+						</div>
+						
+					</div>
+					
+					<div class="control-group <?php echo $errors->has( 'nombre' ) ? 'error' : ''; ?>">
+					
+						<?php echo Form::label('nombre', 'Nombre', array('class' => 'control-label')); ?>
+
+						
+						<div class="controls">
+						
+							<?php echo Form::text( 'nombre', Input::old( 'nombre' ) != "" ? Input::old( 'nombre' ):"" ); ?> <br/>
+							
+							<span class="errNew"><?php echo $errors->first( 'nombre' ); ?></span>
+							
+						</div>
+						
+					</div>
+					
+					<div class="control-group <?php echo $errors->has( 'apellido' ) ? 'error' : ''; ?>">
+					
+						<?php echo Form::label('apellido', 'Apellido', array('class' => 'control-label')); ?>
+
+						
+						<div class="controls">
+						
+							<?php echo Form::text( 'apellido', Input::old( 'apellido' ) != "" ? Input::old( 'apellido' ):"" ); ?> <br/>
+							
+							<span class="errNew"><?php echo $errors->first( 'apellido' ); ?></span>
+							
+						</div>
+						
+					</div>
+					
+					<div class="control-group <?php echo $errors->has( 'email' ) ? 'error' : ''; ?>">
+					
+						<?php echo Form::label('email', 'Email', array('class' => 'control-label')); ?>
+
+						
+						<div class="controls">
+						
+							<?php echo Form::text( 'email', Input::old( 'email' ) != "" ? Input::old( 'email' ):"" ); ?> <br/>
+							
+							<span class="errNew"><?php echo $errors->first( 'email' ); ?></span>
+							
+						</div>
+						
+					</div>
+					
+					
+					<div class="control-group <?php echo $errors->has( 'username' ) ? 'error' : ''; ?>">
+					
+						<?php echo Form::label('username', 'Username', array('class' => 'control-label')); ?>
+
+						
+						<div class="controls">
+						
+							<?php echo Form::text( 'username', Input::old( 'username' ) != "" ? Input::old( 'username' ):"" ); ?> <br/>
+							
+							<span class="errNew"><?php echo $errors->first( 'username' ); ?></span>
+							
+						</div>
+						
+					</div>
+					
+					
+					<div class="control-group <?php echo $errors->has( 'password' ) ? 'error' : ''; ?>">
+					
+						<?php echo Form::label('password', 'Password', array('class' => 'control-label')); ?>
+
+						
+						<div class="controls">
+						
+							<?php echo Form::password( 'password', "" ); ?> <br/>
+							
+							<span class="errNew"><?php echo $errors->first( 'password' ); ?></span>
+							
+						</div>
+						
+					</div>
+					
+					
+					<div class="control-group <?php echo $errors->has( 'password_confirm' ) ? 'error' : ''; ?>">
+					
+						<?php echo Form::label('password_confirm', 'Confirmacion Password', array('class' => 'control-label')); ?>
+
+						
+						<div class="controls">
+						
+							<?php echo Form::password( 'password_confirm', "" ); ?> <br/>
+							
+							<span class="errNew"><?php echo $errors->first( 'password_confirm' ); ?></span>
+							
+						</div>
+						
+					</div>
+
+
+					<div class="control-group <?php echo $errors->has( 'active' ) ? 'error' : ''; ?>">
+					
+						<?php echo Form::label('active', 'Estado', array('class' => 'control-label')); ?>
+
+						
+						<div class="controls">
+						
+							<?php echo Form::select('active', $estados, Input::old( 'active' ) != "" ? Input::old( 'active' ):"" ); ?> <br/>
+							
+							<span class="errNew"><?php echo $errors->first( 'active' ); ?></span>
+							
+						</div>
+						
+					</div>
+
+
+
+
+					
+				</div>
+			
+				
+
+				<div class="form-actions">
+				
+					<button type="submit" class="btn btn-primary"><i class="icon-hdd icon-white"></i> Guardar</button>
+					
+					<a href="<?php echo route('usuario_listar'); ?>" class="btn"><i class="icon-remove-sign"></i> Cancelar</a>
+					
+				</div>
+				
+			<?php echo Form::close(); ?>
+
+
+
+			</div>
+			
+		</div>  
+		
+	</div>
+	
+</div>
+
+
+<!-- BORRAR Modal -->
+<div id="deleteModal" class="modal hide fade">
+	<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		<h3>Borrar registro</h3>
+	</div>
+	
+	<div class="modal-body">
+		¿Esta seguro que desea borrar este archivo?
+	</div>
+	
+	<div class="modal-footer">
+		<a href="#" data-dismiss="modal" class="btn">No</a>
+		<a href="#" data-dismiss="modal" class="btn btn-danger deleteYes">¡Si, estoy seguro!</a>
+	</div>
+</div>
+<!-- BORRAR Modal -->
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('admin.main', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
